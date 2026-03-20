@@ -1,5 +1,5 @@
 name: "Archgate Check"
-description: "Run Archgate ADR compliance checks on your repository. Validates architecture decision records and outputs GitHub annotations for violations."
+description: "Run Archgate ADR compliance checks with GitHub annotations for violations."
 author: "Archgate"
 branding:
   icon: "check-circle"

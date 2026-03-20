@@ -1,0 +1,25 @@
+name: "Archgate Check"
+description: "Run Archgate ADR compliance checks on your repository. Validates architecture decision records and outputs GitHub annotations for violations."
+author: "Archgate"
+branding:
+  icon: "check-circle"
+  color: "blue"
+
+inputs:
+  version:
+    description: "Archgate version to install (e.g. v0.14.0). Defaults to latest."
+    required: false
+    default: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Archgate
+      uses: archgate/setup-action@v1
+      with:
+        version: ${{ inputs.version }}
+
+    - name: Run Archgate Check
+      shell: bash
+      run: |
+        archgate check --ci

@@ -15,7 +15,7 @@ runs:
   using: "composite"
   steps:
     - name: Setup Archgate
-      uses: archgate/setup-action@v1
+      uses: archgate/setup-action@b59adbe1ed404916ee60e1d558766718d5e3076c # v1
       with:
         version: ${{ inputs.version }}
 

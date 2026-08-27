@@ -25,6 +25,10 @@ jobs:
       - uses: archgate/check-action@v1
 ```
 
+## Community
+
+Questions or feedback? Join [r/archgatedev](https://www.reddit.com/r/archgatedev).
+
 ## License
 
 [Apache 2.0](LICENSE)

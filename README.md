@@ -1,6 +1,6 @@
 # Archgate Check
 
-Official GitHub Action to run [Archgate](https://archgate.dev) ADR compliance checks on your repository. Automatically installs Archgate and runs `archgate check --ci`, outputting GitHub annotations for any violations.
+Official GitHub Action to run [Archgate](https://archgate.dev) ADR compliance checks on your repository. Automatically installs Archgate and runs `archgate check --output github`, outputting GitHub annotations for any violations.
 
 ## Inputs
 

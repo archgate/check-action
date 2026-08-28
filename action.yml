@@ -22,4 +22,4 @@ runs:
     - name: Run Archgate Check
       shell: bash
       run: |
-        archgate check --ci
+        archgate check --output github

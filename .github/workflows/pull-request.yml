@@ -27,6 +27,18 @@ jobs:
       - name: actionlint
         uses: docker://rhysd/actionlint@sha256:b1934ee5f1c509618f2508e6eb47ee0d3520686341fec936f3b79331f9315667 # v1.7.12
 
+      # Schema validation of action.yml and the workflows. zizmor skips inputs
+      # that fail its schema with a warning and still exits 0, and actionlint
+      # parses action.yml as a workflow, so neither blocks malformed metadata
+      # in the file this repository publishes.
+      - name: action-validator
+        uses: mpalmer/action-validator@c994f427b7c42cd5ecb1bc9315cb91c3d7d72e3d # v0.9.0
+        with:
+          version: "0.9.0"
+          patterns: |
+            action.yml
+            .github/workflows/*.yml
+
       # Security audit of the workflows and of action.yml. Covers the pinning
       # rules this repository cares about: unpinned-uses and unpinned-images.
       - name: zizmor
